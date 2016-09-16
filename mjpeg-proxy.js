@@ -128,7 +128,9 @@ var MjpegProxy = exports.MjpegProxy = function(mjpegUrl) {
       'Expires': 'Mon, 01 Jul 1980 00:00:00 GMT',
       'Cache-Control': 'no-cache, no-store, must-revalidate',
       'Pragma': 'no-cache',
-      'Content-Type': 'multipart/x-mixed-replace;boundary=' + self.boundary
+      'Content-Type': 'multipart/x-mixed-replace;boundary=' + self.boundary,
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
     });
 
     self.audienceResponses.push(res);
